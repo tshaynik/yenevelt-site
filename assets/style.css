@@ -39,7 +39,7 @@ h2 {
 .hero {
   width: 100vw;
   aspect-ratio: 16 / 9;
-  background-image: url('yenevelt_recording.jpg');
+  background-image: url('img/tmp-yenevelt-trippy-recording.png');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
@@ -48,12 +48,17 @@ h2 {
 }
 
 .hero-overlay {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  margin: auto;
+  width: 30vw;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  margin-top: 20vh;
+  margin-top: 5vh;
   pointer-events: none;
+}
+
+.hero-text {
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
 .small-overlay {
@@ -65,7 +70,7 @@ h2 {
 }
 
 .title-svg {
-  max-width: 30vw;
+  max-width: 35vw;
   height: auto;
   display: block;
   fill: green;
@@ -97,10 +102,6 @@ h2 {
   gap: 2rem;
 }
 
-/* Left side */
-.ensemble-text {
-  flex: 1 1 400px;
-}
 
 .ensemble-text h2 {
   font-size: 2rem;
