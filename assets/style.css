@@ -20,8 +20,26 @@ h1 {
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2ch;
+  gap: 4ch;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #E1E1E1;
 }
 
 *:lang(yi) {
@@ -50,7 +68,6 @@ h2 {
 .hero-overlay {
   margin: auto;
   width: 30vw;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   margin-top: 5vh;
   pointer-events: none;
 }
@@ -86,22 +103,16 @@ h2 {
 }
 
 .ensemble-section {
-  background-color: #49625e;
-  /* dark background */
   width: 100vw;
+  background-color: #1b1b1b;
   color: #f0f0f0;
 }
 
 .ensemble-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
 }
-
 
 .ensemble-text h2 {
   font-size: 2rem;
@@ -121,7 +132,6 @@ h2 {
   background-color: #1b1b1b;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .ensemble-form form {
@@ -164,16 +174,8 @@ h2 {
   background-color: #e5b935;
 }
 
-/* Responsive: stack vertically on small screens */
-@media (max-width: 768px) {
-  .ensemble-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .ensemble-form {
-    width: 100%;
-  }
+#concerts {
+  background-color: #49625e;
 }
 
 .bio {
