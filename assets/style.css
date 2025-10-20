@@ -56,8 +56,8 @@ nav a:hover {
 
 .hero {
   width: 100vw;
-  aspect-ratio: 16 / 9;
-  background-image: url('img/tmp-yenevelt-trippy-recording.png');
+  aspect-ratio: 9 / 12;
+  background-image: url('img/yv_high_ceiling_low.jpg');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ nav a:hover {
 
 .hero-overlay {
   margin: auto;
-  width: 30vw;
+  width: 35vw;
   margin-top: 5vh;
   pointer-events: none;
 }
@@ -84,14 +84,6 @@ nav a:hover {
   display: flex;
   flex-direction: column;
 
-}
-
-.title-svg {
-  max-width: 35vw;
-  height: auto;
-  display: block;
-  fill: green;
-  stroke: green;
 }
 
 .stack *+* {
