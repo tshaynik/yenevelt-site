@@ -57,7 +57,7 @@ nav a:hover {
 .hero {
   width: 100vw;
   aspect-ratio: 9 / 12;
-  background-image: url('img/yv_high_ceiling.jpg');
+  background-image: url('img/yv_high_ceiling_low.jpg');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
