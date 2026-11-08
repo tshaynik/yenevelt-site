@@ -6,6 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="description"
 		content="Yene Velt Yiddish String Ensemble is a Montreal-based band playing traditional klezmer music.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap">
 	<link href="assets/style.css" rel="stylesheet" />
 </head>
 
@@ -39,8 +43,8 @@
 						<input type="hidden" name="nonce" />
 						<label for="email">email:</label>
 						<input type="email" name="email" required placeholder="fiddle@tsimbl.org" />
-						<label for="email">name:</label>
-						<input type="text" name="name" placeholder="(optional)" />
+						<label for="name">name:</label>
+						<input type="text" id="name" name="name" placeholder="(optional)" />
 
 						<input id="299c9" type="checkbox" name="l" checked hidden value="299c9d22-bf63-4efa-9975-601c8d0af58f" />
 
@@ -75,8 +79,8 @@
 		</section>
 		<section id="album">
 			<h2>recordings</h2>
-			<div class=container>
-				<img src="assets/yene-velt-ep-cover-400.jpg" width="400px" alt="Yene Velt EP">
+			<div class="album-container">
+				<img src="assets/yene-velt-ep-cover-400.jpg" width="400" height="400" alt="Yene Velt EP cover: a wooden synagogue under a cloudy sky">
 				<p>Releasing on October 26 2025 on <a href="https://borschtbeat.bandcamp.com">Borscht Beat Records</a>!
 			</div>
 		</section>
@@ -96,15 +100,15 @@
 
 		</section>
 
-		<section id="contact" className="section">
-			<div className="container">
-				<h2 className="section-title">Get in Touch</h2>
-				<div className="contact-content">
+		<section id="contact" class="section">
+			<div class="container">
+				<h2 class="section-title">Get in Touch</h2>
+				<div class="contact-content">
 					<p>
 						For booking inquiries, collaborations, or just to say <em>sholem aleikhem</em>.
 					</p>
 
-					<div className="contact-email">
+					<div class="contact-email">
 						<svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
 							<polyline points="22,6 12,13 2,6"></polyline>
@@ -114,11 +118,11 @@
 						</a>
 					</div>
 
-					<div className="contact-separator"></div>
+					<div class="contact-separator"></div>
 
 					<div>
-						<p className="social-intro">Follow us on social media</p>
-						<div className="social-links">
+						<p class="social-intro">Follow us on social media</p>
+						<div class="social-links">
 							<a href="https://instagram.com/yenevelt" target="_blank" rel="noopener noreferrer"
 								aria-label="Follow us on Instagram">
 								<svg class="instagram icon" fill="currentColor" viewBox="0 0 24 24">
@@ -136,7 +140,7 @@
 							</a>
 							<a href="https://bsky.app/profile/yenevelt" target="_blank" rel="noopener noreferrer"
 								aria-label="Follow us on Bluesky">
-								<svg class="bluesky icon" fill="black" viewBox="0 0 24 24">
+								<svg class="bluesky icon" fill="currentColor" viewBox="0 0 24 24">
 									<path
 										d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.018.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" />
 								</svg>
