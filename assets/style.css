@@ -16,8 +16,8 @@
   --color-paper-dim: #e9e1d2;
   --color-teal: #49625e;       /* EP-cover frame green */
   --color-teal-deep: #354a46;
-  --color-gold: #d4a017;       /* chandelier lamplight */
-  --color-gold-bright: #e5b935;
+  --color-accent: #6f4fae;       /* deep violet, for cream/dark text & fills */
+  --color-accent-bright: #a98fd9; /* lighter violet, readable on the dark band */
   --color-text-on-dark: #f0ebe2;
   --color-text-muted: #6b6257;
   --color-text-muted-dark: #b9b0a1;
@@ -104,11 +104,11 @@ a {
 }
 
 a:hover {
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-gold);
+  outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
 
@@ -171,7 +171,7 @@ section {
 
 .top-nav a:hover,
 .top-nav a:focus-visible {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-bright);
 }
 
 .hero-overlay {
@@ -183,7 +183,8 @@ section {
   flex: 1;
   width: min(80vw, 34rem);
   margin-inline: auto;
-  padding-block: var(--space-5) var(--space-6);
+  /* Bias the title block above the vertical centre of the photo */
+  padding-block: var(--space-5) 73%;
   pointer-events: none;
 }
 
@@ -234,32 +235,30 @@ section {
 
 .ensemble-form {
   width: 100%;
-  padding: var(--space-5);
-  border: 1px solid var(--color-ink-soft);
-  border-radius: var(--radius);
-  background-color: #191410;
+  max-width: 26rem;
 }
 
 .ensemble-form form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
   text-align: start;
 }
 
 .ensemble-form label {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-text-muted-dark);
+  color: var(--color-accent-bright);
 }
 
 .ensemble-form input:not([type="checkbox"]) {
-  padding: 0.75rem;
-  border: 1px solid var(--color-ink-soft);
-  border-radius: var(--radius);
-  background-color: var(--color-ink);
+  padding: var(--space-2) 0;
+  border: none;
+  border-block-end: 1px solid rgb(240 235 226 / 0.35);
+  border-radius: 0;
+  background-color: transparent;
   color: var(--color-text-on-dark);
   font: inherit;
   transition: border-color var(--transition);
@@ -270,25 +269,33 @@ section {
 }
 
 .ensemble-form input:focus {
-  border-color: var(--color-gold);
+  border-block-end-color: var(--color-accent-bright);
   outline: none;
 }
 
 .ensemble-form button {
   padding: 0.75rem;
-  border: none;
-  border-radius: var(--radius);
-  background-color: var(--color-gold);
-  color: var(--color-ink);
+  border: 1px solid var(--color-accent-bright);
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--color-accent-bright);
   font: inherit;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .ensemble-form button:hover,
 .ensemble-form button:focus-visible {
-  background-color: var(--color-gold-bright);
+  background-color: var(--color-accent-bright);
+  color: var(--color-ink);
+}
+
+.ensemble-form button:hover,
+.ensemble-form button:focus-visible {
+  background-color: var(--color-accent-bright);
 }
 
 /* --------------------------------------------------------------------------
@@ -428,7 +435,7 @@ svg.icon {
 
 .contact-separator {
   width: 4rem;
-  border-top: 2px solid var(--color-gold);
+  border-top: 2px solid var(--color-accent);
 }
 
 .social-intro {
@@ -456,7 +463,7 @@ svg.icon {
 
 .social-links a:hover,
 .social-links a:focus-visible {
-  background-color: var(--color-gold);
+  background-color: var(--color-accent);
   color: var(--color-ink);
   transform: translateY(-2px);
 }
