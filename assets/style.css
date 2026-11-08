@@ -35,7 +35,9 @@
   --space-6: 4rem;
 
   /* Layout */
-  --measure: 60ch;
+  --measure: 40rem; /* fixed reading measure: 60ch is relative to the
+                       element's font-size, so it would give headings a
+                       much wider measure than body text */
   --container: 68rem;
   --radius: 8px;
 
@@ -222,11 +224,12 @@ section {
 .ensemble-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-4);
-  max-width: 42rem;
+  max-width: var(--measure);
   margin-inline: auto;
-  text-align: center;
+  padding-inline: var(--space-4);
+  text-align: start;
 }
 
 .ensemble-section h2 {
@@ -293,11 +296,6 @@ section {
   color: var(--color-ink);
 }
 
-.ensemble-form button:hover,
-.ensemble-form button:focus-visible {
-  background-color: var(--color-accent-bright);
-}
-
 /* --------------------------------------------------------------------------
    About
    -------------------------------------------------------------------------- */
@@ -312,17 +310,13 @@ section {
    Recordings
    -------------------------------------------------------------------------- */
 
-#album {
-  text-align: center;
-}
-
-.album-container {
+#album .album-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--space-5);
-  max-width: var(--container);
+  max-width: var(--measure);
   margin-inline: auto;
   padding-inline: var(--space-4);
 }
@@ -350,7 +344,12 @@ section {
   color: var(--color-paper);
 }
 
-#concerts h2 {
+/* Section headings that sit outside a padded column share the same
+   left edge as the content columns (#subscribe's h2 is handled by
+   .ensemble-container, which is already padded to the same edge). */
+#album h2,
+#concerts h2,
+#contact h2 {
   max-width: var(--measure);
   margin-inline: auto;
   padding-inline: var(--space-4);
@@ -390,21 +389,15 @@ section {
    Contact
    -------------------------------------------------------------------------- */
 
-#contact {
-  text-align: center;
-}
-
-.section-title {
-  margin-block-end: var(--space-4);
-}
-
-.contact-content {
+#contact .contact-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-4);
   max-width: var(--measure);
   margin-inline: auto;
+  padding-inline: var(--space-4);
+  text-align: start;
 }
 
 .contact-email {
@@ -445,7 +438,7 @@ svg.icon {
 
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--space-4);
   margin-block-start: var(--space-2);
 }
