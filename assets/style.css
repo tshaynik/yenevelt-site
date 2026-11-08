@@ -142,10 +142,12 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: min(92vh, 60rem);
+  /* Match the photo's intrinsic ratio (1768×2650) so the full image is
+     visible at every viewport width — no cropping, no letterboxing. */
+  aspect-ratio: 1768 / 2650;
   background-image: url("img/yv_high_ceiling_low.jpg");
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-color: var(--color-ink); /* loads before the photo does */
 }
